@@ -3,6 +3,6 @@ const [CHAT_ID, BOT_TOKEN, commitTag, commitMessage, userEmail] =
 
 const TelegramBot = require("node-telegram-bot-api");
 
-const bot = new TelegramBot(BOT_TOKEN, { polling: false });
+const bot = new TelegramBot(BOT_TOKEN);
 
 bot.sendMessage(CHAT_ID, `${commitTag} ${commitMessage} ${userEmail}`);
